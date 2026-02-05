@@ -5,6 +5,11 @@ body {
   transition: background-image 0.3s ease-out;
 }
 
+button:active {
+  scale: calc(0.95);
+  box-shadow: none;
+}
+
 [data-theme='dark'] body {
   background-image: linear-gradient(#04091c, #0a1542);
 }

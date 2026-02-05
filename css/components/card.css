@@ -13,6 +13,8 @@
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease-out;
 }
 
 .cardHeader {
@@ -31,19 +33,21 @@
 .cardInfo {
   display: flex;
   flex-direction: column;
-  gap: 4px
+  gap: 4px;
 }
 
 .cardTitle {
   font-size: var(--font-size-card-title);
   font-weight: 700;
   color: var(--color-text-primary);
+  transition: color 0.3s ease-out;
 }
 
 .cardDescription {
   font-size: var(--font-size-card-body);
   color: var(--color-text-secondary);
   line-height: 1.5;
+  transition: color 0.3s ease-out;
 }
 
 .cardActions {
@@ -58,9 +62,10 @@
   font-weight: 500;
   color: var(--color-text-primary);
   background-color: transparent;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   border-radius: 24px;
   transition: all 0.2s ease-out;
+  box-shadow: var(--shadow-button);
 }
 
 .cardBtnRemove:hover {
@@ -113,4 +118,8 @@
 
 .cardToggle input:checked + .cardToggleSlider::before {
   transform: translateX(1.25rem);
+}
+
+.card.inactive {
+  opacity: 0.6;
 }

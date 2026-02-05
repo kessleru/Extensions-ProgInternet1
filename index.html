@@ -11,22 +11,23 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <meta name="description" content="Um site para gerenciar extensões do navegador" />
     <title>Extensions</title>
   </head>
   <body class="container">
     <header class="header">
       <img class="logo" src="./assets/images/logo.svg" alt="Logo" />
       <button class="toogleTheme">
-        <img src="./assets/images/icon-moon.svg" alt="Lua" />
+        <img class="themeLogo" src=""/>
       </button>
     </header>
     <main>
       <nav class="nav">
         <h2 class="navTitle">Extensions List</h2>
         <ul class="navFilters">
-          <li><button class="filter">All</button></li>
-          <li><button class="filter">Active</button></li>
-          <li><button class="filter">Inactive</button></li>
+          <li><button class="filter" id="all">All</button></li>
+          <li><button class="filter" id="active">Active</button></li>
+          <li><button class="filter" id="inactive">Inactive</button></li>
         </ul>
       </nav>
       <section class="gridCards">

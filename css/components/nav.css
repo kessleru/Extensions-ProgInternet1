@@ -8,6 +8,7 @@
 .navTitle {
   font-size: var(--font-size-title);
   color: var(--color-text-primary);
+  transition: color 0.3s ease-out;
 }
 
 .navFilters {
@@ -18,13 +19,20 @@
 
 .filter {
   background-color: var(--color-card);
+  color: var(--color-text-primary);
   padding: 4px 12px;
   border-radius: 24px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 2px 2px -1px rgb(0 0 0 / 0.070);
-  transition: all 0.2s ease-out;
+  box-shadow: var(--shadow-button);
+  transition: all 0.3s ease-out;
 }
 
 .filter:hover {
   background-color: var(--color-card-hover);
+}
+
+.filter.on {
+  background-color: var(--color-primary);
+  color: var(--color-text-hover);
+  border-color: var(--color-primary);
 }

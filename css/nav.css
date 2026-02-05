@@ -21,10 +21,9 @@
   border-radius: 24px;
   border: 1px solid var(--color-border);
   box-shadow: 0 2px 2px -1px rgb(0 0 0 / 0.075);
-  transition: background-color 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .filter:hover {
-  background-color: var(--color-primary);
-  color: var(--color-text-hover);
+  background-color: var(--color-card-hover);
 }

@@ -1,0 +1,24 @@
+/* 2 colunas */
+@media (max-width: 992px) {
+  .gridCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 1 coluna */
+@media (max-width: 610px) {
+  .gridCards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+
+  .navFilters {
+    justify-content: center;
+  }
+}

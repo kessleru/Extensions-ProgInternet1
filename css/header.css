@@ -5,14 +5,14 @@
   justify-content: space-between;
   background-color: var(--color-card);
   padding: 12px;
-  border-radius: var(--border-card-radius);
+  border-radius: 16px;
   box-shadow: 0 4px 2px -1px rgb(0 0 0 / 0.075);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .toogleTheme {
   padding: 12px;
-  border-radius: var(--border-button-radius);
+  border-radius: 12px;
   border: none;
   background-color: var(--color-bg-theme);
 }

@@ -1,3 +1,30 @@
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.navTitle {
+  font-size: var(--font-size-title);
+  color: var(--color-text-primary);
+}
+
+.navFilters {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.filter {
+  background-color: var(--color-card);
+  padding: 4px 12px;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 2px -1px rgb(0 0 0 / 0.075);
+  transition: background-color 0.2s ease-out;
+}
+
+.filter:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-hover);
 }

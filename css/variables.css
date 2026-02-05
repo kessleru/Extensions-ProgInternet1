@@ -6,23 +6,15 @@
   /* Text */
   --color-text-primary: #091540;
   --color-text-secondary: #475569;
+  --color-text-hover: #fcfdff;
 
   /* Primary / Accent */
   --color-primary: #e53935;
-  /* --color-primary-hover: #d32f2f;
-  --color-primary-active: #c62828;
-  --color-primary-soft: #fdecea; */
 
   /* Borders & Dividers */
   --color-border: #e2e8f0;
   --color-border-light: #f1f5f9;
   --color-border-strong: #cbd5e1;
-
-  /* Buttons */
-  /* --color-button-primary: var(--color-primary);
-  --color-button-primary-text: #ffffff;
-  --color-button-secondary: #f1f5f9;
-  --color-button-secondary-text: #0f172a; */
 
   /* Toggle / Switch */
   --color-toggle-on: var(--color-primary);
@@ -32,26 +24,18 @@
   /* Theme Button */
   --color-bg-theme: #eeeeee;
 
-  /* Icons */
-  /* --color-icon-primary: #0f172a;
-  --color-icon-secondary: #475569;
-  --color-icon-muted: #94a3b8; */
-
   /* UI States */
   --color-success: #16a34a;
   --color-warning: #f59e0b;
   --color-error: #dc2626;
   --color-info: #0284c7;
 
+  --font-title: "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-ui: "Roboto", system-ui, sans-serif;
 
-  --border-card-radius: 16px;
-  --border-button-radius: 12px;
-
-  --font-title: "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-ui: "Inter", system-ui, sans-serif;
-
-  --font-size-title: 1rem;
-  --font-size-body: 0.875rem;
-  --font-size-ui: 0.75rem;
+  --font-size-title: 2rem;
+  --font-size-card-title: 1.875rem;
+  --font-size-card-body: 1.75rem;
+  --font-size-button: 1.875rem;
 }

@@ -35,7 +35,7 @@
   --font-ui: "Roboto", system-ui, sans-serif;
 
   --font-size-title: 2rem;
-  --font-size-card-title: 1.875rem;
-  --font-size-card-body: 1.75rem;
-  --font-size-button: 1.875rem;
+  --font-size-card-title: 1.125rem;
+  --font-size-card-body: 0.875rem;
+  --font-size-button: 0.875rem;
 }

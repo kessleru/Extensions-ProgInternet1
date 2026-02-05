@@ -1,7 +1,6 @@
 body {
   min-height: 100vh;
   background-image: linear-gradient(#ebf2fc, #effbf9);
-  font-family: var(--font-title);
   transition: background-image 0.3s ease-out;
 }
 

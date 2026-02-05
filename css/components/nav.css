@@ -7,6 +7,7 @@
 
 .navTitle {
   font-size: var(--font-size-title);
+  font-family: var(--font-title);
   color: var(--color-text-primary);
   transition: color 0.3s ease-out;
 }
@@ -19,6 +20,7 @@
 
 .filter {
   background-color: var(--color-card);
+  font-family: var(--font-ui);
   color: var(--color-text-primary);
   padding: 4px 12px;
   border-radius: 24px;

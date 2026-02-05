@@ -38,6 +38,7 @@
 
 .cardTitle {
   font-size: var(--font-size-card-title);
+  font-family: var(--font-title);
   font-weight: 700;
   color: var(--color-text-primary);
   transition: color 0.3s ease-out;
@@ -45,6 +46,7 @@
 
 .cardDescription {
   font-size: var(--font-size-card-body);
+  font-family: var(--font-body);
   color: var(--color-text-secondary);
   line-height: 1.5;
   transition: color 0.3s ease-out;
@@ -59,6 +61,7 @@
 .cardBtnRemove {
   padding: 0.5rem 1rem;
   font-size: var(--font-size-button);
+  font-family: var(--font-ui);
   font-weight: 500;
   color: var(--color-text-primary);
   background-color: transparent;

@@ -5,6 +5,9 @@ function toggleOff() {
 
   cards.forEach((card) => {
     const toggle = card.querySelector('.card-toggle input');
+    const data = getExtensionsData();
+    const cardName = card.dataset.name;
+    const index = data.findIndex((item) => item.name === cardName);
 
     if (toggle) {
       if (!toggle.checked) {
@@ -13,8 +16,10 @@ function toggleOff() {
 
       toggle.addEventListener('change', () => {
         if (!toggle.checked) {
+          data[index].isActive = false;
           card.classList.add('inactive');
         } else {
+          data[index].isActive = true;
           card.classList.remove('inactive');
         }
       });
@@ -33,10 +38,8 @@ function removeCard() {
       if (card) {
         const cardName = card.dataset.name;
         const index = data.findIndex((item) => item.name === cardName);
+        data.splice(index, 1);
 
-        if (index !== -1) {
-          data.splice(index, 1);
-        }
         card.remove();
       }
     });

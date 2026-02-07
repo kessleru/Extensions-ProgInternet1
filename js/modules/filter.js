@@ -1,15 +1,9 @@
-import { renderCards } from './displayCards.js';
+import { renderCardsList } from './displayCards.js';
 import { getExtensionsData } from './fetchData.js';
 
 function clearCards() {
   const gridCards = document.querySelector('.grid-cards');
   gridCards.innerHTML = '';
-}
-
-function renderCardList(cards) {
-  cards.forEach((card, index) => {
-    renderCards(card, index);
-  });
 }
 
 function setActiveFilter(activeButton) {
@@ -30,7 +24,7 @@ function filterCards() {
     }
     setActiveFilter(allButton);
     clearCards();
-    renderCardList(data);
+    renderCardsList(data);
   });
 
   activeButton.addEventListener('click', () => {
@@ -41,7 +35,7 @@ function filterCards() {
     const activeCards = data.filter((card) => card.isActive === true);
     setActiveFilter(activeButton);
     clearCards();
-    renderCardList(activeCards);
+    renderCardsList(activeCards);
   });
 
   inactiveButton.addEventListener('click', () => {
@@ -52,7 +46,7 @@ function filterCards() {
     const inactiveCards = data.filter((card) => card.isActive === false);
     setActiveFilter(inactiveButton);
     clearCards();
-    renderCardList(inactiveCards);
+    renderCardsList(inactiveCards);
   });
 }
 

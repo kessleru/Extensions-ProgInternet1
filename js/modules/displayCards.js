@@ -1,7 +1,7 @@
 import { removeCard, toggleOff } from './cardFunctions.js';
 import { getExtensionsData } from './fetchData.js';
 
-function renderCards(card, index) {
+function renderCards(card) {
   const gridCards = document.querySelector('.grid-cards');
 
   const cardElement = document.createElement('article');
@@ -31,18 +31,18 @@ function renderCards(card, index) {
     </div>
   `;
 
-  toggleOff();
-  removeCard();
-
   gridCards.appendChild(cardElement);
 }
 
-function initDisplayCards() {
-  const data = getExtensionsData();
+function renderCardsList(dataImp) {
+  const data = dataImp ?? getExtensionsData();
 
-  data.forEach((card, index) => {
-    renderCards(card, index);
+  data.forEach((card) => {
+    renderCards(card);
   });
+
+  toggleOff();
+  removeCard();
 }
 
-export { initDisplayCards, renderCards };
+export { renderCardsList };

@@ -1,13 +1,13 @@
 /* 2 colunas */
-@media (max-width: 992px) {
-  .gridCards {
+@media (width <= 992px) {
+  .grid-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 /* 1 coluna */
-@media (max-width: 610px) {
-  .gridCards {
+@media (width <= 610px) {
+  .grid-cards {
     grid-template-columns: 1fr;
   }
 
@@ -18,7 +18,7 @@
     margin-bottom: 24px;
   }
 
-  .navFilters {
+  .nav-filters {
     justify-content: center;
   }
 }

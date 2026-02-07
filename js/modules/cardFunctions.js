@@ -4,7 +4,7 @@ function toggleOff() {
   const cards = document.querySelectorAll('.card');
 
   cards.forEach((card) => {
-    const toggle = card.querySelector('.cardToggle input');
+    const toggle = card.querySelector('.card-toggle input');
 
     if (toggle) {
       if (!toggle.checked) {
@@ -23,7 +23,7 @@ function toggleOff() {
 }
 
 function removeCard() {
-  const removeButtons = document.querySelectorAll('.cardBtnRemove');
+  const removeButtons = document.querySelectorAll('.card-btn-remove');
 
   removeButtons.forEach((button) => {
     button.addEventListener('click', () => {

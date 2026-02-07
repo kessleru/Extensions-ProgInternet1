@@ -1,4 +1,4 @@
-.gridCards {
+.grid-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
@@ -17,26 +17,26 @@
   transition: all 0.3s ease-out;
 }
 
-.cardHeader {
+.card-header {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
 
-.cardLogo {
+.card-logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 12px;
   flex-shrink: 0;
 }
 
-.cardInfo {
+.card-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.cardTitle {
+.card-title {
   font-size: var(--font-size-card-title);
   font-family: var(--font-title);
   font-weight: 700;
@@ -44,7 +44,7 @@
   transition: color 0.3s ease-out;
 }
 
-.cardDescription {
+.card-description {
   font-size: var(--font-size-card-body);
   font-family: var(--font-body);
   color: var(--color-text-secondary);
@@ -52,13 +52,13 @@
   transition: color 0.3s ease-out;
 }
 
-.cardActions {
+.card-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cardBtnRemove {
+.card-btn-remove {
   padding: 0.5rem 1rem;
   font-size: var(--font-size-button);
   font-family: var(--font-ui);
@@ -71,38 +71,35 @@
   box-shadow: var(--shadow-button);
 }
 
-.cardBtnRemove:hover {
+.card-btn-remove:hover {
   background-color: var(--color-primary);
   color: var(--color-text-hover);
   border-color: var(--color-primary);
 }
 
-.cardToggle {
+.card-toggle {
   position: relative;
   display: inline-block;
   width: 2.75rem;
   height: 1.5rem;
 }
 
-.cardToggle input {
+.card-toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.cardToggleSlider {
+.card-toggle-slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: var(--color-toggle-off);
   border-radius: 24px;
   transition: 0.3s;
 }
 
-.cardToggleSlider::before {
+.card-toggle-slider::before {
   position: absolute;
   content: '';
   height: 1rem;
@@ -112,14 +109,14 @@
   background-color: var(--color-toggle-thumb);
   border-radius: 50%;
   transition: 0.3s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
 }
 
-.cardToggle input:checked + .cardToggleSlider {
+.card-toggle input:checked + .card-toggle-slider {
   background-color: var(--color-toggle-on);
 }
 
-.cardToggle input:checked + .cardToggleSlider::before {
+.card-toggle input:checked + .card-toggle-slider::before {
   transform: translateX(1.25rem);
 }
 

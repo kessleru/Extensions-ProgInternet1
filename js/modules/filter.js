@@ -2,7 +2,7 @@ import { renderCards } from './displayCards.js';
 import { getExtensionsData } from './fetchData.js';
 
 function clearCards() {
-  const gridCards = document.querySelector('.gridCards');
+  const gridCards = document.querySelector('.grid-cards');
   gridCards.innerHTML = '';
 }
 

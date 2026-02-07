@@ -1,19 +1,19 @@
 function updateSVG(theme) {
-  const themeLogo = document.querySelector('.themeLogo');
+  const themeLogo = document.querySelector('.theme-logo');
   const logo = document.querySelector('.logo');
   if (themeLogo) {
     if (theme === 'dark') {
       themeLogo.src = './assets/images/icon-sun.svg';
-      logo.src = './assets/images/logo-light.svg'
+      logo.src = './assets/images/logo-light.svg';
     } else {
       themeLogo.src = './assets/images/icon-moon.svg';
-      logo.src = './assets/images/logo.svg'
+      logo.src = './assets/images/logo.svg';
     }
   }
 }
 
 function toggleTheme() {
-  const themeButton = document.querySelector('.toogleTheme');
+  const themeButton = document.querySelector('.toggle-theme');
 
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {

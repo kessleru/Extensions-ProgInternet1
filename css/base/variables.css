@@ -16,16 +16,16 @@
 
   /* Toggle / Switch */
   --color-toggle-on: var(--color-primary);
-  --color-toggle-off: #eeeeee;
-  --color-toggle-thumb: #ffffff;
+  --color-toggle-off: #eee;
+  --color-toggle-thumb: #fff;
 
   /* Theme Button */
-  --color-bg-theme: #eeeeee;
+  --color-bg-theme: #eee;
 
   /* Fonts */
-  --font-title: "Google Sans", system-ui, sans-serif;
-  --font-body: "Roboto", system-ui, sans-serif;
-  --font-ui: "Roboto", system-ui, sans-serif;
+  --font-title: 'Google Sans', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, sans-serif;
+  --font-ui: 'Roboto', system-ui, sans-serif;
 
   /* Font Sizes */
   --font-size-title: 2rem;
@@ -34,12 +34,12 @@
   --font-size-button: 0.875rem;
 
   /* Shadows */
-  --shadow-card: 0 4px 2px -1px rgb(0 0 0 / 0.070);
-  --shadow-button: 0 2px 2px -1px rgb(0 0 0 / 0.070);
+  --shadow-card: 0 4px 2px -1px rgb(0 0 0 / 7%);
+  --shadow-button: 0 2px 2px -1px rgb(0 0 0 / 7%);
 }
 
 /* Dark Theme */
-[data-theme="dark"] {
+[data-theme='dark'] {
   /* Base */
   --color-card: #1e293b;
   --color-card-hover: #334155;
@@ -64,6 +64,6 @@
   --color-bg-theme: #334155;
 
   /* Shadows */
-  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.3);
-  --shadow-button: 0 2px 4px -1px rgb(0 0 0 / 0.3);
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 30%);
+  --shadow-button: 0 2px 4px -1px rgb(0 0 0 / 30%);
 }

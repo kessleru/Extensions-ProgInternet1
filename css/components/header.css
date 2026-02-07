@@ -15,17 +15,17 @@
   pointer-events: none;
 }
 
-.toogleTheme {
+.toggle-theme {
   padding: 12px;
   border-radius: 12px;
   background-color: var(--color-bg-theme);
   transition: all 0.3s ease-out;
 }
 
-.toogleTheme img {
+.toggle-theme img {
   transition: all 0.2s ease-out;
 }
 
-.toogleTheme:hover img {
+.toggle-theme:hover img {
   rotate: 30deg;
 }

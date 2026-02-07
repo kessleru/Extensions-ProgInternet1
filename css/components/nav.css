@@ -5,14 +5,14 @@
   margin-bottom: 1rem;
 }
 
-.navTitle {
+.nav-title {
   font-size: var(--font-size-title);
   font-family: var(--font-title);
   color: var(--color-text-primary);
   transition: color 0.3s ease-out;
 }
 
-.navFilters {
+.nav-filters {
   display: flex;
   justify-content: space-between;
   gap: 12px;

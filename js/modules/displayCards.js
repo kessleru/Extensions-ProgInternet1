@@ -2,31 +2,31 @@ import { removeCard, toggleOff } from './cardFunctions.js';
 import { getExtensionsData } from './fetchData.js';
 
 function renderCards(card, index) {
-  const gridCards = document.querySelector('.gridCards');
+  const gridCards = document.querySelector('.grid-cards');
 
   const cardElement = document.createElement('article');
   cardElement.classList.add('card');
   cardElement.dataset.name = card.name;
 
   cardElement.innerHTML = `
-    <div class="cardHeader">
+    <div class="card-header">
       <img
-        class="cardLogo"
+        class="card-logo"
         src="${card.logo}"
         alt="${card.name} logo"
       />
-      <div class="cardInfo">
-        <h3 class="cardTitle">${card.name}</h3>
-        <p class="cardDescription">
+      <div class="card-info">
+        <h3 class="card-title">${card.name}</h3>
+        <p class="card-description">
           ${card.description}
         </p>
       </div>
     </div>
-    <div class="cardActions">
-      <button class="cardBtnRemove">Remove</button>
-      <label class="cardToggle">
-        <input class="cardToggleInput" type="checkbox" ${card.isActive ? 'checked' : ''} />
-        <span class="cardToggleSlider"></span>
+    <div class="card-actions">
+      <button class="card-btn-remove">Remove</button>
+      <label class="card-toggle">
+        <input class="card-toggle-input" type="checkbox" ${card.isActive ? 'checked' : ''} />
+        <span class="card-toggle-slider"></span>
       </label>
     </div>
   `;

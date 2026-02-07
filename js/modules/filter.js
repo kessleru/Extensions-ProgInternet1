@@ -1,46 +1,15 @@
-import { getExtensionsData } from './displayCards.js';
-import { toggleOff, removeCard } from './cardFunctions.js';
+import { renderCards } from './displayCards.js';
+import { getExtensionsData } from './fetchData.js';
 
 function clearCards() {
   const gridCards = document.querySelector('.gridCards');
   gridCards.innerHTML = '';
 }
 
-function renderCards(cards) {
-  const gridCards = document.querySelector('.gridCards');
-
-  cards.forEach((card) => {
-    const cardElement = document.createElement('article');
-    cardElement.classList.add('card');
-
-    cardElement.innerHTML = `
-      <div class="cardHeader">
-        <img
-          class="cardLogo"
-          src="${card.logo}"
-          alt="${card.name} logo"
-        />
-        <div class="cardInfo">
-          <h3 class="cardTitle">${card.name}</h3>
-          <p class="cardDescription">
-            ${card.description}
-          </p>
-        </div>
-      </div>
-      <div class="cardActions">
-        <button class="cardBtnRemove">Remove</button>
-        <label class="cardToggle">
-          <input class="cardToggleInput" type="checkbox" ${card.isActive ? 'checked' : ''} />
-          <span class="cardToggleSlider"></span>
-        </label>
-      </div>
-    `;
-
-    gridCards.appendChild(cardElement);
+function renderCardList(cards) {
+  cards.forEach((card, index) => {
+    renderCards(card, index);
   });
-
-  toggleOff();
-  removeCard();
 }
 
 function setActiveFilter(activeButton) {
@@ -56,25 +25,34 @@ function filterCards() {
 
   allButton.addEventListener('click', () => {
     const data = getExtensionsData();
+    if (!data) {
+      return;
+    }
     setActiveFilter(allButton);
     clearCards();
-    renderCards(data);
+    renderCardList(data);
   });
 
   activeButton.addEventListener('click', () => {
     const data = getExtensionsData();
+    if (!data) {
+      return;
+    }
     const activeCards = data.filter((card) => card.isActive === true);
     setActiveFilter(activeButton);
     clearCards();
-    renderCards(activeCards);
+    renderCardList(activeCards);
   });
 
   inactiveButton.addEventListener('click', () => {
     const data = getExtensionsData();
+    if (!data) {
+      return;
+    }
     const inactiveCards = data.filter((card) => card.isActive === false);
     setActiveFilter(inactiveButton);
     clearCards();
-    renderCards(inactiveCards);
+    renderCardList(inactiveCards);
   });
 }
 

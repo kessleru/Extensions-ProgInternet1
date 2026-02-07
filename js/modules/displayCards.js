@@ -1,23 +1,12 @@
-let extensionsData = null;
+import { removeCard, toggleOff } from './cardFunctions.js';
+import { getExtensionsData } from './fetchData.js';
 
-async function loadData() {
-  try {
-    const response = await fetch('./data.json');
-    const extensions = await response.json();
-
-    extensionsData = extensions;
-
-    return extensions;
-  } catch (error) {
-    console.error('Erro ao carregar dados:', error);
-  }
-}
-
-function displayCards(card) {
+function renderCards(card, index) {
   const gridCards = document.querySelector('.gridCards');
 
   const cardElement = document.createElement('article');
   cardElement.classList.add('card');
+  cardElement.dataset.name = card.name;
 
   cardElement.innerHTML = `
     <div class="cardHeader">
@@ -42,24 +31,18 @@ function displayCards(card) {
     </div>
   `;
 
+  toggleOff();
+  removeCard();
+
   gridCards.appendChild(cardElement);
 }
 
-function allOn() {
-  const allButton = document.getElementById('all');
-  allButton.classList.add('on');
-}
+function initDisplayCards() {
+  const data = getExtensionsData();
 
-async function initDisplayCards() {
-  const data = await loadData();
-
-  data.forEach((card) => {
-    displayCards(card);
+  data.forEach((card, index) => {
+    renderCards(card, index);
   });
 }
 
-function getExtensionsData() {
-  return extensionsData;
-}
-
-export { initDisplayCards, getExtensionsData, allOn };
+export { initDisplayCards, renderCards };

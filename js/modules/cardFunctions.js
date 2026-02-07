@@ -1,3 +1,5 @@
+import { getExtensionsData } from './fetchData.js';
+
 function toggleOff() {
   const cards = document.querySelectorAll('.card');
 
@@ -26,7 +28,15 @@ function removeCard() {
   removeButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const card = button.closest('.card');
+      const data = getExtensionsData();
+
       if (card) {
+        const cardName = card.dataset.name;
+        const index = data.findIndex((item) => item.name === cardName);
+
+        if (index !== -1) {
+          data.splice(index, 1);
+        }
         card.remove();
       }
     });

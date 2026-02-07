@@ -36,6 +36,9 @@
   /* Shadows */
   --shadow-card: 0 4px 2px -1px rgb(0 0 0 / 7%);
   --shadow-button: 0 2px 2px -1px rgb(0 0 0 / 7%);
+
+  /* Cor do foco visível */
+  --focus-color: var(--color-primary);
 }
 
 /* Dark Theme */

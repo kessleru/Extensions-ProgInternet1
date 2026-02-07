@@ -60,3 +60,9 @@ button {
   background: none;
   cursor: pointer;
 }
+
+/* Foco visível para elementos interativos */
+button:focus-visible {
+  outline: 1px solid var(--focus-color);
+  outline-offset: 2px;
+}

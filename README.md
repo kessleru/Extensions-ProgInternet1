@@ -1,8 +1,6 @@
 # Lista 05 - Interface de gerenciamento de extensões do navegador
 
 ![Prévia do design para o desafio de codificação da Interface de gerenciamento de extensões do navegador](./assets/images/preview.jpg)
-[![Super-Linter](https://github.com/kessleru/Extensions-ProgInternet/actions/workflows/super-linter.yml/badge.svg)](https://github.com/kessleru/Extensions-ProgInternet/actions/workflows/super-linter.yml)
-
 
 ## Instruções! 👋
 
